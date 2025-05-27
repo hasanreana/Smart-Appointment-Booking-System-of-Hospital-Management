@@ -1,0 +1,467 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Adjusted for better spacing */
+    background-color: rgb(3, 111, 119);
+    color: white;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    height: 80px;
+    z-index: 1000;
+    padding: 0 20px; /* Added padding for spacing */
+}
+
+ul {
+    display: flex;
+    padding-left: 0;
+}
+
+ul li {
+    list-style: none;
+}
+
+ul li a {
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    margin-inline: 22px;
+}
+
+ul li a:hover {
+    color: black;
+}
+
+.logo {
+    font-size: 22px;
+}
+
+#bar {
+    display: none;
+}
+/* Style for Register and Log Out Buttons */
+.auth-buttons {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.auth-btn {
+    font-size: 18px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: bold;
+}
+
+.register-btn {
+    background-color: #4CAF50; /* Green for register */
+    color: white;
+}
+
+.logout-btn {
+    background-color: #F44336; /* Red for log out */
+    color: white;
+}
+
+.auth-btn:hover {
+    opacity: 0.8;
+}
+
+/* Responsive for smaller screens */
+@media screen and (max-width: 600px) {
+    .auth-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .auth-btn {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+
+
+/* Main Section */
+.main {
+    display: flex;
+    justify-content: center;
+    margin-top: 80px;
+    background-color: rgb(3, 111, 119);
+    color: white;
+    padding: 33px;
+}
+
+.main img {
+    width: 740px;
+}
+
+.main h1 {
+    font-size: 55px;
+}
+
+.mainText {
+    margin-top: 43px;
+}
+
+.mainText p {
+    margin-top: 22px;
+}
+
+.mainText button {
+    width: 140px;
+    height: 40px;
+    background-color: black;
+    color: white;
+    font-size: 20px;
+    border: none;
+    margin-top: 33px;
+    cursor: pointer;
+}
+
+/* Sections */
+.head {
+    text-align: center;
+    padding: 88px;
+}
+
+.serviceCard {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 55px;
+}
+
+.serviceCard .card {
+    width: 200px;
+    border: 2px solid black;
+    padding: 21px;
+    margin-top: 22px;
+    text-align: center;
+}
+
+.serviceCard .card:hover {
+    cursor: pointer;
+    background-color: rgb(1, 73, 97);
+    color: white;
+}
+
+/* Doctors */
+.doctor {
+    width: 830px;
+    height: 340px;
+    position: relative;
+    margin: auto;
+    overflow: hidden;
+}
+
+.team {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+    color: white;
+    text-align: center;
+    transition: all 1s ease;
+}
+
+.team img {
+    width: 240px;
+    height: 300px;
+    margin-inline: 20px;
+}
+
+/* Blogs */
+.blogs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.blogs .blogCard {
+    width: 300px;
+    background-color: rgb(0, 99, 99);
+    text-align: center;
+    color: white;
+    margin-inline: 22px;
+    margin-top: 22px;
+    padding: 22px;
+}
+
+.blogCard img {
+    width: 100%;
+    height: 250px;
+}
+
+.blogCard a {
+    padding: 4px 19px;
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    position: relative;
+    top: 11px;
+    font-size: 20px;
+}
+
+/* Consultation Type Dropdown */
+.consultation-type {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin: 20px auto;
+}
+
+.consultation-type label {
+    font-size: 16px;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #004d99;
+}
+
+.consultation-type select {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    color: #333;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.consultation-type select:hover {
+    border-color: #004d99;
+    background-color: #e6f7ff;
+    color: #004d99;
+}
+/* Style for Online Prescription Button */
+.prescription-button-container {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.prescription-btn {
+    font-size: 18px;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 8px;
+    background-color: #2196F3; /* Blue color */
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.prescription-btn:hover {
+    background-color: #0b7dda; /* Darker blue on hover */
+    transform: scale(1.05); /* Slight scale effect */
+}
+
+.prescription-btn:focus {
+    outline: none;
+    box-shadow: 0px 0px 8px rgba(33, 150, 243, 0.6);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 600px) {
+    .prescription-btn {
+        width: 100%;
+        padding: 14px;
+        font-size: 20px;
+    }
+}
+
+
+/* Appointment */
+.form {
+    width: 400px;
+    margin: auto;
+    padding: 22px;
+    background-color: #dbdada;
+    text-align: center;
+}
+
+.form input,
+.form select {
+    width: 90%;
+    font-size: 20px;
+    padding: 11px;
+    margin-top: 22px;
+    outline: none;
+}
+
+.form button {
+    width: 200px;
+    height: 44px;
+    background-color: rgb(1, 66, 66);
+    color: white;
+    font-size: 22px;
+    border: none;
+    margin-top: 22px;
+    cursor: pointer;
+}
+
+/* Feedback Section */
+#feedback {
+    background-color: #f4f4f4;
+    padding: 40px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+#feedback h2 {
+    margin-bottom: 20px;
+}
+
+#feedback textarea {
+    width: 80%;
+    margin: 10px auto;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    display: block;
+}
+
+#feedback button {
+    display: block;
+    margin: 10px auto;
+    padding: 10px 20px;
+    background-color: #004d99;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+/* Payment Section */
+.payment {
+    text-align: center;
+    padding: 40px;
+    background: #004d99;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.payment button {
+    padding: 10px 20px;
+    background-color: #004d99;
+    color: white;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.payment button:hover {
+    background-color: #3f51b5;
+}
+
+/* Multi-language Dropdown */
+.language-selector {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 1000;
+    background: linear-gradient(135deg, #2196f3, #4caf50);
+    border-radius: 5px;
+    padding: 5px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.language-selector select {
+    font-size: 16px;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: white;
+    color: #004d99;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* Footer */
+.footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: black;
+    color: white;
+    padding: 66px;
+    margin-top: 66px;
+}
+
+.footer p {
+    margin-top: 15px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1100px) {
+    .main {
+        display: block;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 920px) {
+    .doctor {
+        width: 90%;
+    }
+    .doctor img {
+        width: 200px;
+    }
+    .main img {
+        width: 500px;
+    }
+}
+
+@media screen and (max-width: 780px) {
+    .team img {
+        margin-inline: 11px;
+        width: 150px;
+        height: 200px;
+    }
+}
+
+@media screen and (max-width: 580px) {
+    .team img {
+        margin-inline: 2px;
+        width: 30%;
+        height: 100px;
+    }
+    .main img {
+        width: 90%;
+    }
+    .form {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    ul {
+        display: none;
+    }
+    #bar {
+        display: block;
+        font-size: 33px;
+    }
+}
